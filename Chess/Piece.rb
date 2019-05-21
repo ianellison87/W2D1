@@ -1,3 +1,5 @@
+require "singleton"
+
 class Piece
 
   def initialize
@@ -11,7 +13,7 @@ class Piece
 end
 
 class NullPiece < Piece
-
+  include Singleton
   def initialize
   end
 

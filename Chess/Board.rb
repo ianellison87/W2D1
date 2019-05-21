@@ -15,7 +15,7 @@ class Board
         if i == 0 || i == 1 || i == 6 || i == 7
           @grid[i][j] = Piece.new
         else
-          @grid[i][j] = NullPiece.new
+          @grid[i][j] = NullPiece.instance
         end
       end
     end
@@ -34,7 +34,7 @@ class Board
     else
       pp temp = @grid[startx][starty] 
       @grid[endx][endy] = temp
-      @grid[startx][starty] = NullPiece.new
+      @grid[startx][starty] = NullPiece.instance
     end
 
     # rescue
@@ -44,5 +44,5 @@ class Board
 end#
 
 pp x = Board.new()
-x.move_piece([3,0], [4,5])
+x.move_piece([0,0], [4,5])
 pp x
